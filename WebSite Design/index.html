@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RateFlix</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/lightslider.css">
+    <script src="js/JQuery3.3.1.js"></script>
+    <script src="js/lightslider.js"></script>
+    <link rel="shortcut icon" href="images/icon.png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap">
+    <script src="https://kit.fontawesome.com/e816ad5257.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav>
+        <a href="#" class="logo">
+            <img src="images/logo.png">
+        </a>
+
+        <ul class="menu">
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Filmes</a></li>
+            <li><a href="#">Series</a></li>
+        </ul>
+
+        <div class="search">
+            <input type="text" placeholder="Procurar">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+    </nav>
+    
+    <section id="main">
+        <h1 class="showcase-heading">Destaques</h1>
+
+        <ul id="autoWidth" class="cs-hidden">
+            <li class="item-a">
+                <div class="showcase-box">
+                    <img src="images/TheBatmanH.jpg">
+                </div>
+            </li>
+            <li class="item-b">
+                <div class="showcase-box">
+                    <img src="images/FightClubH.jpg">
+                </div>
+            </li>
+            <li class="item-c">
+                <div class="showcase-box">
+                    <img src="images/3.jpg">
+                </div>
+            </li>
+            <li class="item-d">
+                <div class="showcase-box">
+                    <img src="images/4.jpg">
+                </div>
+            </li>
+            <li class="item-e">
+                <div class="showcase-box">
+                    <img src="images/5.jpg">
+                </div>
+            </li>
+          </ul>
+    </section>
+
+    <section id="latest-heading">
+        <h1 class="latest-heading">Últimos Filmes</h1>
+
+        <ul id="autoWidth2" class="cs-hidden">
+            <li class="item-a">
+                <div class="latest-box">
+                    <div class="latest-b-img">
+                        <img src="images/AssassinosV.jpg">
+                    </div>
+
+                    <div class="latest-b-text">
+                        <strong>The Batman</strong>
+                        <p>Ação</p>
+                    </div>
+                </div>
+            </li>
+
+            <li class="item-b">
+                <div class="latest-box">
+                    <div class="latest-b-img">
+                        <img src="images/GranTurismo.jpg">
+                    </div>
+
+                    <div class="latest-b-text">
+                        <strong>The Batman</strong>
+                        <p>Ação</p>
+                    </div>
+                </div>
+            </li>
+
+            <li class="item-c">
+                <div class="latest-box">
+                    <div class="latest-b-img">
+                        <img src="images/TheBatman.jpg">
+                    </div>
+
+                    <div class="latest-b-text">
+                        <strong>The Batman</strong>
+                        <p>Ação</p>
+                    </div>
+                </div>
+            </li>
+          </ul>
+    </section>
+
+    <script>
+        $(document).ready(function() {
+            $('#autoWidth,#autoWidth2').lightSlider({
+                autoWidth:true,
+                loop:true,
+                onSliderLoad: function() {
+                    $('#autoWidth,#autoWidth2').removeClass('cS-hidden');
+                } 
+            });  
+        });
+    </script>
+</body>
+</html>
